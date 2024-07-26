@@ -1,0 +1,207 @@
+\documentclass{scrartcl}
+\usepackage{enumerate}
+\usepackage[clausemark=forceboth, juratotoc, juratocnumberwidth=2.5em]{scrjura}
+\usepackage{scrlayer-scrpage}
+\usepackage{lastpage}
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+\setmainlanguage{german}
+
+%\usepackage[luatex]{changebar}
+\usepackage{expl3}
+\usepackage[pdfpagelabels=false]{hyperref}
+\usepackage[table,x11names]{xcolor}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+
+%% Set Fonts
+\setmainfont[Ligatures=TeX,Scale=MatchLowercase]{IBM Plex Serif}
+\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{IBM Plex Sans}
+\setmonofont[Ligatures=TeX,Scale=MatchLowercase]{IBM Plex Mono}
+
+\useshorthands{’}
+\defineshorthand{’S}{\Sentence\ignorespaces}
+\defineshorthand{’.}{. \Sentence\ignorespaces}
+
+\ohead[]{}
+\ihead[]{}
+\chead[]{}
+\ofoot[]{}
+\ifoot[]{}
+\cfoot[-- Seite \thepage\ von \pageref{LastPage} --]{-- Seite \thepage\ von \pageref{LastPage} --}
+
+
+
+\begin{document}
+\subject{Satzung}
+\title{VfVmai}
+\subtitle{Verein für Vereinsmaierei mit ai e.\,V.}
+\date{11.\,11.\,2011}
+\author{}
+\maketitle
+
+\tableofcontents
+
+\addsec{Präambel}
+Diese Satzungsvorlage basiert auf der Koma-Script-Anleitung und der \href{https://www.bmj.de/SharedDocs/Downloads/DE/Formular/Mustersatzung_eines_Vereins.pdf?__blob=publicationFile&v=4}{Mustersatzung} für gemeinnützige Vereine auf der Homepage des Bundesministeriums für Justiz\footnote{\url{https://www.bmj.de/SharedDocs/Downloads/DE/Formular/Mustersatzung_eines_Vereins.pdf?__blob=publicationFile&v=4}}. Der Inhalt ist den jeweiligen Bedingungen anzupassen, es besteht keine Garantie für Korrektheit.
+
+
+\appendix % Dirty Trick um Buchstaben als Section-Zähler zu haben
+
+\section{Allgemeines}
+\begin{contract}
+\Clause{title={Name und Sitz des Vereins, Geschäftsjahr}}
+\begin{enumerate}
+    \item Der Verein führt den Namen NAME. Er soll in das Vereinsregister eingetragen werden und führt danach den Zusatz „e.V.".
+    \item Der Verein hat seinen Sitz in ORT.
+    \item Das Geschäftsjahr ist das Kalenderjahr.
+\end{enumerate} 
+
+\Clause{title={Zweck, Gemeinnützigkeit des Vereins}}
+\begin{enumerate}
+    \item Der Verein mit Sitz in (Ortsangabe entsprechend § 1 Absatz 2) verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke im Sinne des Abschnitts „Steuerbegünstigte Zwecke" der Abgabenordnung.
+    \item Der Zweck des Vereins ist die Förderung … (Zweck nach § 52 Absatz 2 der Abgabenordnung angeben). Der Satzungszweck wird insbesondere verwirklicht durch …
+    \item Der Verein ist selbstlos tätig; er verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke.
+    \item Mittel des Vereins dürfen nur für die satzungsmäßigen Zwecke verwendet werden. Die Mitglieder erhalten keine Zuwendungen aus den Mitteln des Vereins.
+    \item Es darf keine Person durch Ausgaben, die dem Zweck des Vereins fremd sind, oder durch unverhältnismäßig hohe Vergütungen begünstigt werden
+\end{enumerate}
+
+\end{contract}
+
+\section{Mitgliedschaft}
+\begin{contract}
+\Clause{title={Erwerb der Mitgliedschaft}}    
+\begin{enumerate}
+    \item Mitglied des Vereins kann jede (natürliche) Person werden.
+    \item Die Aufnahme in den Verein ist schriftlich beim Vorstand zu beantragen. Bei Minderjährigen ist der Aufnahmeantrag durch die gesetzlichen Vertreter zu stellen. Der Vorstand entscheidet über den Aufnahmeantrag nach freiem Ermessen. Eine Ablehnung des Antrags muss er gegenüber dem Antragsteller nicht begründen.
+    \item Auf Vorschlag des Vorstands kann die Mitgliederversammlung Mitglieder oder sonstige Personen, die sich um den Verein besonders verdient gemacht haben, zu Ehrenmitgliedern auf Lebenszeit ernennen.
+\end{enumerate}
+
+\Clause{title={Beendigung der Mitgliedschaft}}
+\begin{enumerate}
+    \item Die Mitgliedschaft im Verein endet durch Tod (bei juristischen Personen mit deren Erlöschen), Austritt oder Ausschluss.
+    \item Der Austritt ist schriftlich gegenüber dem Vorstand zu erklären. Der Austritt kann nur mit einer Frist von drei Monaten zum Ende des Geschäftsjahres erklärt werden.
+    \item Ein Mitglied kann durch Beschluss der Mitgliederversammlung aus dem Verein
+    ausgeschlossen werden, wenn es 
+    \begin{enumerate}[(a)]
+        \item schuldhaft das Ansehen oder die Interessen des
+        Vereins in schwerwiegender Weise schädigt oder
+        \item mehr als drei Monate mit der Zahlung
+        seiner Aufnahmegebühr oder seiner Mitgliedsbeiträge im Rückstand ist und trotz schriftlicher
+        Mahnung unter Androhung des Ausschlusses die Rückstände nicht eingezahlt hat.
+    \end{enumerate}
+    Dem Mitglied ist Gelegenheit zu geben, in der Mitgliederversammlung zu den Gründen des Ausschlusses Stellung zu nehmen. Diese sind ihm mindestens zwei Wochen vorher mitzuteilen.
+\end{enumerate}
+
+\Clause{title={Rechte und Pflichten der Mitglieder}}
+\begin{enumerate}
+    \item Jedes Mitglied hat das Recht, die Einrichtungen des Vereins zu nutzen und an gemeinsamen Veranstaltungen teilzunehmen.  Jedes Mitglied hat gleiches Stimm- und Wahlrecht in der Mitgliederversammlung.
+    \item Jedes Mitglied hat die Pflicht, die Interessen des Vereins zu fördern, insbesondere regelmäßig seine Mitgliedsbeiträge zu leisten und, soweit es in seinen Kräften steht, das Vereinsleben durch seine Mitarbeit zu unterstützen.
+\end{enumerate}
+
+\Clause{title={Aufnahmegebühr und Mitgliedsbeiträge}}
+\begin{enumerate}
+    \item Jedes Mitglied hat einen im Voraus fällig werdenden monatlichen Mitgliedsbeitrag zu entrichten.
+    \item Die Höhe der Aufnahmegebühr und der Mitgliedsbeiträge wird von der Mitgliederversammlung festgelegt.
+    \item Ehrenmitglieder sind von der Aufnahmegebühr und den Mitgliedsbeiträgen befreit.
+\end{enumerate}
+
+\end{contract}
+
+\section{Organe des Vereines}
+\begin{contract}
+\Clause{title={Organe des Vereins}}
+Organe des Vereins sind die Mitgliederversammlung und der Vorstand.
+
+\Clause{title={Vorstand}}
+\begin{enumerate}
+    \item Der Vorstand besteht aus dem Vorsitzenden, seinem Stellvertreter und dem Schatzmeister.
+    \item Der Vorsitzende, sein Stellvertreter und der Schatzmeister vertreten den Verein jeweils allein.
+    \item Den Mitgliedern des Vorstands kann eine Vergütung gezahlt werden. Über die Höhe der Vergütung entscheidet die Mitgliederversammlung.
+\end{enumerate}
+
+\Clause{title={Aufgaben des Vorstands}}
+Dem Vorstand des Vereins obliegen die Vertretung des Vereins nach § 26 BGB und die
+Führung seiner Geschäfte. Er hat insbesondere folgende Aufgaben: 
+\begin{enumerate}[(a)]
+    \item die Einberufung und Vorbereitung der Mitgliederversammlungen einschließlich der Aufstellung der Tagesordnung,
+    \item die Ausführung von Beschlüssen der Mitgliederversammlung,
+    \item die Verwaltung des Vereinsvermögens und die Anfertigung des Jahresberichts,
+    \item die Aufnahme neuer Mitglieder.
+\end{enumerate} 
+
+\Clause{title={Bestellung des Vorstands}}
+\begin{enumerate}
+    \item Die Mitglieder des Vorstands werden von der Mitgliederversammlung für die Dauer von zwei Jahren einzeln gewählt. Mitglieder des Vorstands können nur Mitglieder des Vereins sein; mit der Mitgliedschaft im Verein endet auch die Mitgliedschaft im Vorstand. Die Wiederwahl oder die vorzeitige Abberufung eines Mitglieds durch die Mitgliederversammlung    ist zulässig. Ein Mitglied bleibt nach Ablauf der regulären Amtszeit bis zur Wahl seines Nachfolgers im Amt.
+    \item Scheidet ein Mitglied vorzeitig aus dem Vorstand aus, so sind die verbleibenden Mitglieder des Vorstands berechtigt, ein Mitglied des Vereins bis zur Wahl des Nachfolgers durch die Mitgliederversammlung in den Vorstand zu wählen.
+\end{enumerate}
+
+\Clause{title={Beratung und Beschlussfassung des Vorstands}}
+\begin{enumerate}
+    \item Der Vorstand tritt nach Bedarf zusammen. Die Sitzungen werden vom Vorsitzenden, bei dessen Verhinderung von seinem Stellvertreter, einberufen. Eine Einberufungsfrist von einer Woche soll eingehalten werden. Der Vorstand ist beschlussfähig, wenn mindestens zwei Mitglieder anwesend sind. Bei der Beschlussfassung entscheidet die Mehrheit der abgegebenen gültigen Stimmen. Bei Stimmengleichheit entscheidet die Stimme des Vorsitzenden, bei dessen Verhinderung die seines Stellvertreters.
+    \item Die Beschlüsse des Vorstands sind zu protokollieren. Das Protokoll ist vom Protokollführer sowie vom Vorsitzenden, bei dessen Verhinderung von seinem Stellvertreter oder einem anderen Mitglied des Vorstands zu unterschreiben.
+\end{enumerate}
+
+\Clause{title={Aufgaben der Mitgliederversammlung}}
+Die Mitgliederversammlung ist zuständig für die Entscheidungen in folgenden
+Angelegenheiten: 
+\begin{enumerate}[(a)]
+    \item Änderungen der Satzung,
+    \item die Festsetzung der Aufnahmegebühr und der Mitgliedsbeiträge,
+    \item die Ernennung von Ehrenmitgliedern sowie der Ausschluss von Mitgliedern aus dem Verein, 
+    \item die Wahl und die Abberufung der Mitglieder des Vorstands,
+    \item die Entgegennahme des Jahresberichts und die Entlastung des Vorstands,
+    \item die Auflösung des Vereins.
+\end{enumerate}
+
+\Clause{title={Einberufung der Mitgliederversammlung}}
+\begin{enumerate}
+    \item  Mindestens einmal im Jahr, möglichst im ersten Quartal, ist vom Vorstand eine ordentliche Mitgliederversammlung einzuberufen. Die Einberufung erfolgt schriftlich unter Einhaltung einer Frist von zwei Wochen und unter Angabe der Tagesordnung.
+    \item Die Tagesordnung setzt der Vorstand fest. Jedes Vereinsmitglied kann bis spätestens eine Woche vor der Mitgliederversammlung beim Vorstand schriftlich eine Ergänzung der Tagesordnung beantragen. Über den Antrag entscheidet der Vorstand. Über Anträge zur  Tagesordnung, die vom Vorstand nicht aufgenommen wurden oder die erstmals in der     Mitgliederversammlung gestellt werden, entscheidet die Mitgliederversammlung mit der Mehrheit der Stimmen der anwesenden Mitglieder; dies gilt nicht für Anträge, die eine Änderung der Satzung, Änderungen der Mitgliedsbeiträge oder die Auflösung des Vereins zum Gegenstand haben.
+    \item Der Vorstand hat eine außerordentliche Mitgliederversammlung einzuberufen, wenn es das Interesse des Vereins erfordert oder wenn mindestens ein Zehntel der Mitglieder dies schriftlich unter Angabe des Zwecks und der Gründe beantragt.
+\end{enumerate}
+
+\Clause{title={Beschlussfassung der Mitgliederversammlung}}
+\begin{enumerate}
+    \item Die Mitgliederversammlung wird vom Vorsitzenden des Vorstands, bei dessen Verhinderung von seinem Stellvertreter und bei dessen Verhinderung von einem durch die Mitgliederversammlung zu wählenden Versammlungsleiter geleitet.
+    \item Die Mitgliederversammlung ist beschlussfähig, wenn mindestens ein Drittel aller Vereinsmitglieder anwesend ist. Bei Beschlussunfähigkeit ist der Vorstand verpflichtet, innerhalb von vier Wochen eine zweite Mitgliederversammlung mit der gleichen Tagesordnung einzuberufen. Diese ist ohne Rücksicht auf die Zahl der erschienenen  Mitglieder beschlussfähig. Hierauf ist in der Einladung hinzuweisen.
+    \item Die Mitgliederversammlung beschließt in offener Abstimmung mit der Mehrheit der Stimmen der anwesenden Mitglieder. Kann bei Wahlen kein Kandidat die Mehrheit der Stimmen der anwesenden Mitglieder auf sich vereinen, ist gewählt, wer die Mehrheit der abgegebenen gültigen Stimmen erhalten hat; zwischen mehreren Kandidaten ist eine Stichwahl durchzuführen. Beschlüsse über eine Änderung der Satzung bedürfen der Mehrheit von drei Vierteln, der Beschluss über die Änderung des Zwecks oder die Auflösung des Vereins der Zustimmung von neun Zehnteln der anwesenden Mitglieder.
+    \item Über den Ablauf der Mitgliederversammlung und die gefassten Beschlüsse ist ein Protokoll zu fertigen, das vom Protokollführer und vom Versammlungsleiter zu unterschreiben ist.
+\end{enumerate}
+
+\end{contract}
+
+\section{Auflösung des Vereins}
+
+\begin{contract}
+\Clause{title={Auflösung des Vereins, Beendigung aus anderen Gründen, Wegfall
+steuerbegünstigter Zwecke}}  
+\begin{enumerate}
+    \item  Im Falle der Auflösung des Vereins sind der Vorsitzende des Vorstands und sein Stellvertreter gemeinsam vertretungsberechtigte Liquidatoren, falls die Mitgliederversammlung keine anderen Personen beruft.
+    \item Bei Auflösung oder Aufhebung des Vereins oder bei Wegfall steuerbegünstigter Zwecke fällt das Vermögen des Vereins an eine juristische Person des öffentlichen Rechts oder eine  andere steuerbegünstigte Körperschaft, zwecks Verwendung für … (Angabe eines bestimmten gemeinnützigen, mildtätigen oder kirchlichen Zwecks).
+    \item Die vorstehenden Bestimmungen gelten entsprechend, wenn dem Verein die Rechtsfähigkeit entzogen wurde.
+\end{enumerate}
+\end{contract}
+
+\pagebreak
+\section{Annahme der Satzung}
+Die vorstehende Satzung wurde in der Gründungsversammlung/Mitgliederversammlung vom XX.XX.XXXX in XXX errichtet/verabschiedet. 
+
+\vspace{2cm}
+Ort, Datum
+
+Bei Gründung (mindestens 7 Mitglieder):
+
+\begin{tabular}{r p{0.3\textwidth} p{0.3\textwidth}}
+    & Name & Unterschrift \\ \midrule
+    1) \vspace{1.5cm}    & & \\ \midrule
+    2) \vspace{1.5cm}    & & \\ \midrule
+    3) \vspace{1.5cm}    & & \\ \midrule
+    4) \vspace{1.5cm}    & & \\ \midrule
+    5) \vspace{1.5cm}    & & \\ \midrule
+    6) \vspace{1.5cm}    & & \\ \midrule
+    7) \vspace{1.5cm}    & & \\ \midrule
+\end{tabular}
+
+\end{document}

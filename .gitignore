@@ -1,0 +1,17 @@
+*.aux
+*.log
+*.synctex.gz
+*.synctex(busy)
+*.fdb*
+*.fls
+*.gfi
+*.out
+*.docx
+*.toc
+*.cb
+*.cb2
+*.soc
+*.loc
+*.pdf
+
+
