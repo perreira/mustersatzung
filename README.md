@@ -5,3 +5,5 @@ Da man doch ab und zu mal in die Verlegenheit kommt, einen Verein zu gründen, g
 Die originale Musterstazung findet sich hier: <https://www.bmj.de/SharedDocs/Downloads/DE/Formular/Mustersatzung_eines_Vereins.pdf?__blob=publicationFile&v=4>
 
 Die Gemeinnützigen Zwecke in der Abgabenordnung finden sich hier: <https://www.gesetze-im-internet.de/ao_1977/__52.html>
+
+Benötigt TeXLive 2024, bei Versionen vorher ist das Paket contract durch das Paket scrjura zu ersetzen und die Befehle \Clause[] durch \Clause{} zu ersetzen (mandatory argument anstelle optionales arument)
